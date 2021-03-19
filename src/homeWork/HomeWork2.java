@@ -110,8 +110,9 @@ public class HomeWork2 {
                 if (min==99) {
                     System.out.println("Ваше чилсо 100! Это было трудно.");
                     break;}
-
             }
+//            Для проверки git commit
+        
 
     }
 }
