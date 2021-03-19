@@ -119,7 +119,7 @@ public class HomeWork2 {
                     break;}}
             }
 
-//            Для проверки git commit 2222
+//            Для проверки git commit 222222
 
 
 
