@@ -56,11 +56,10 @@ public class HomeWork2 {
             tarelka-=1;
             dish-=0.5;
             System.out.println("У вас осталось "+dish+" моющего средства");
-        }
         if (tarelka == 0 && dish==0) {
             System.out.println("У вас чистая посуда, но нет моющего средства, нужно сходить в магазин)");
         } else {
-            System.out.println("У вас осталось "+tarelka+" грязных тарелок");
+            System.out.println("У вас осталось "+tarelka+" грязных тарелок"); }
         }
 
 //        Задача 4
@@ -117,8 +116,9 @@ public class HomeWork2 {
                         } else {min=(max+min)/2;}}
                 if (min==99) {
                     System.out.println("Ваше чилсо 100! Это было трудно.");
-                    break;}
-            }}
+                    break;}}
+            }
+
 //            Для проверки git commit
 
 
