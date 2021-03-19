@@ -96,23 +96,32 @@ public class HomeWork2 {
         System.out.println("При ответах используйте 1 - да, 0 - нет");
 
             while (in1 == 0) {
+                int ques = (int) (Math.random()*2);
                 System.out.println("Ваше число " + (max+min)/2 + "?");
                 in1 = userNum5.nextInt();
                 if (in1 ==1) {
                     System.out.println("Я так и знал!");
                     break;
                 } else {
+                    if (ques==1) {
                     System.out.println("Оно больше?");
                     in2 = userNum6.nextInt();
                     if (in2 == 1) {
                         min=(max+min)/2;
                     } else {max=(max+min)/2;}}
+                    if (ques==0) {
+                        System.out.println("Оно меньше?");
+                        in2 = userNum6.nextInt();
+                        if (in2 == 1) {
+                            max=(max+min)/2;
+                        } else {min=(max+min)/2;}}
                 if (min==99) {
                     System.out.println("Ваше чилсо 100! Это было трудно.");
                     break;}
-            }
+            }}
 //            Для проверки git commit
-        
+
+
 
     }
 }
