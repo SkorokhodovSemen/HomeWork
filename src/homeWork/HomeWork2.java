@@ -89,6 +89,8 @@ public class HomeWork2 {
 
 
 //            Задача 6
+//        В 6 задаче я использовал дополнительное условие если и рандомизатор для выполнения задачи, что компьютер
+//        задает 2 вопрос больше или меньше. Можно было обойтись и 1.
             int in1=0, in2=0, max=100, min=1;
             Scanner userNum5 = new Scanner(System.in);
             Scanner userNum6 = new Scanner(System.in);
@@ -119,7 +121,6 @@ public class HomeWork2 {
                     break;}}
             }
 
-//            Для проверки git commit 2222
 
 
 
