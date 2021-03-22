@@ -55,12 +55,12 @@ public class HomeWork2 {
         while (tarelka > 0 && (dish >=0.5)) {
             tarelka-=1;
             dish-=0.5;
-            System.out.println("У вас осталось "+dish+" моющего средства");
+            System.out.println("У вас осталось "+dish+" моющего средства");}
         if (tarelka == 0 && dish==0) {
             System.out.println("У вас чистая посуда, но нет моющего средства, нужно сходить в магазин)");
         } else {
             System.out.println("У вас осталось "+tarelka+" грязных тарелок"); }
-        }
+
 
 //        Задача 4
         int zagadka =1+(int)(Math.random()*9);
