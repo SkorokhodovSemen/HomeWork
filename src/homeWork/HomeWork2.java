@@ -102,8 +102,7 @@ public class HomeWork2 {
                 in1 = userNum5.nextInt();
                 if (in1 ==1) {
                     System.out.println("Я так и знал!");
-                    break;
-                } else {
+                    break; }
                     if (ques==1) {
                     System.out.println("Оно больше?");
                     in2 = userNum6.nextInt();
@@ -125,4 +124,3 @@ public class HomeWork2 {
 
 
     }
-}
