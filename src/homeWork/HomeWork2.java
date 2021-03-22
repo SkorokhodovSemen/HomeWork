@@ -63,7 +63,7 @@ public class HomeWork2 {
         }
 
 //        Задача 4
-        int zagadka =1+(int)(Math.random()*10);
+        int zagadka =1+(int)(Math.random()*9);
         int prov;
         Scanner userNum4 = new Scanner(System.in);
         while (true) {
