@@ -63,7 +63,7 @@ public class HomeWork2 {
         }
 
 //        Задача 4
-        int zagadka =1+(int)(Math.random()*11);
+        int zagadka =1+(int)(Math.random()*10);
         int prov;
         Scanner userNum4 = new Scanner(System.in);
         while (true) {
@@ -79,7 +79,7 @@ public class HomeWork2 {
 
 
 //            Задача 5
-        int random = 10 + (int) (Math.random()*501);
+        int random = 10 + (int) (Math.random()*491);
         if (random > 25 && random<200) {
             System.out.println("Число" + random + "входит в диапазон (25;200)");
         } else {
@@ -118,9 +118,9 @@ public class HomeWork2 {
                 if (min==99) {
                     System.out.println("Ваше чилсо 100! Это было трудно.");
                     break;}}
+
+
+
+
             }
-
-
-
-
     }
