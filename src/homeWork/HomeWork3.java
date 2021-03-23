@@ -109,5 +109,31 @@ public class HomeWork3 {
         if (c1>=a1 && c1>=b1) System.out.println("Число 1 встречается чаще всего, а именно " +c1+ " раз" );
 
 
+        //2 способ, но при одинаковом количестве повторений на экран выведется первое максимальное чилсо при поиске
+        //То есть, если 1 и -1 повторяются одинаково, то если при проверке 1 была раньше, чем -1, то на ответ выйдет 1
+
+        int[] ints8 = new int[11];
+        int max1 = 0;
+        int znach = 0;
+        int l=0;
+        for (int i = 0; i <ints8.length; i++) {
+            ints8[i]=(int)(Math.random()*3)-1;
+        }
+        System.out.println(Arrays.toString(ints8));
+        for (int k = 0; k < ints8.length; k++) {
+            for (int i = 0; i < ints8.length; i++) {
+                if (ints8[k] == ints8[i]) {
+                    l+=1;
+                    if (l>max1) {
+                        max1=l;
+                        znach = ints8[k];
+                    }
+                }
+            }
+            l=0;
+        }
+        System.out.println("Число " +znach+ " встречается чаще всего, а именно " +max1+ " раз");
+
+
     }
 }
