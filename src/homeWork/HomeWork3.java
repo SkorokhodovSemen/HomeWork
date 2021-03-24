@@ -90,8 +90,8 @@ public class HomeWork3 {
             ints6[i]=2+2*i;
         }
         Arrays.sort(ints6, Collections.reverseOrder()); //Что такое коллекция? Можно ли его использовать в данном случае?
-        System.out.println(Arrays.toString(ints6)); //Можно было написать цикл с выводом на консоль каждого элемента построчно.
-        //for (int i = ints6.lenght-1; i >=0; i--) System.out.println(ints6[i]);
+        System.out.println(Arrays.toString(ints6)); //Можно было написать цикл с выводом на консоль каждого элемента
+        //for (int i = ints6.lenght-1; i >=0; i--) System.out.println(ints6[i] + " ");
 
 
         // 5. Создайте массив из 11 случайных целых чисел из отрезка [-1;1], выведите массив в консоль.
