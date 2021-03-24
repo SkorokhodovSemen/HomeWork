@@ -26,6 +26,8 @@ public class HomeWork2 {
         Scanner userNum = new Scanner(System.in);
         num3=userNum.nextInt();
         switch (num3) {
+            case 0:
+                System.out.println("На ноль делить нельзя");
             case 3:
                 System.out.println(num1+num2);
                 break;
