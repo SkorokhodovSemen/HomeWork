@@ -11,7 +11,11 @@ public class HomeWork3 {
         // 1. Поменять местами минимальный и максимальный элементы
 
         // Задача 1
-        int[] ints = new int[]{1000,22,-258,-6,0,7963};
+        int[] ints = new int[20];
+        for (int i = 0; i < ints.length; i++) {
+            ints[i]=(int)(Math.random()*497)+3;
+        }
+        System.out.println(Arrays.toString(ints));
         int min= Integer.MAX_VALUE;
         int max=Integer.MIN_VALUE;
         int mini = 0, maxi=0;
