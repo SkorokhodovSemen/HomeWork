@@ -10,7 +10,7 @@ public class Cat {
     private String colorCat;
     private double speedCat;
     private double weightCat;
-    private int eat[];
+    private Mouse eat[];
 
     public String getNameCat() {
         return nameCat;
@@ -56,19 +56,22 @@ public class Cat {
         this.weightCat = weightCat;
     }
 
-    public int[] getEat() {
-        return eat;
-    }
+
+    public Cat () {eat = new Mouse[100];}
 
     public void addMouse(Mouse mouse){
         if (mouse.getSpeedMouse()<getSpeedCat()) {
             for (int i = 0; i < 100; i++) {
-                if (eat[i] == 0) {
-                    eat[i] = i+1;
+                if (eat[i] == null) {
+                    eat[i] = mouse;
                     return;
-                } else System.out.println("У кота очень много мышей");
+                }
             }
         } else System.out.println("Не поймал");
+    }
+
+    public Mouse[] getEat() {
+        return eat;
     }
 
     public void fightCat(Cat cat1, Cat cat2) {
@@ -78,23 +81,23 @@ public class Cat {
         }
         if (cat1.getWeightCat() > cat2.getWeightCat()) {
             for (int i = 0; i < 100; i++) {
-                cat2.getEat()[i] = 0;
-                if (cat1.getSpeedCat() > cat2.getEat()[i].getSpeedMouse) {
+                if (cat1.getSpeedCat() > cat2.getEat()[i].getSpeedMouse()) {
                     for (int j = 0; j < 100; j++) {
-                        if (eat[j] == 0) {
-                            eat[j] = j + 1;
+                        if (eat[j] == null) {
+                            eat[j] = eat[i];
                             break;
                         }
                     }
                 } else System.out.println("Мышонок сбежал");
+                cat2.getEat()[i] = null;
             }
         } else {
             for (int i = 0; i < 100; i++) {
-                cat1.getEat()[i] = 0;
-                if (cat2.getSpeedCat() > (cat1.getEat()[i]).getSpeedMouse) {
+                cat1.getEat()[i] = null;
+                if (cat2.getSpeedCat() > cat1.getEat()[i].getSpeedMouse()) {
                     for (int j = 0; j < 100; j++) {
-                        if (eat[j] == 0) {
-                            eat[j] = j + 1;
+                        if (eat[j] == null) {
+                            eat[j] = eat[i];
                             break;
                         }
                     }

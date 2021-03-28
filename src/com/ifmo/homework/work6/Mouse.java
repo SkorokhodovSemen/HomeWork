@@ -10,7 +10,7 @@ public class Mouse {
         return speedMouse;
     }
 
-    public void setSpeedMouse(double speedMouse) {
+    public void setSpeedMouse(int speedMouse) {
         if (speedMouse < 1 || speedMouse>20) {
             throw new IllegalArgumentException("Не бывает таких мышей");
         }
