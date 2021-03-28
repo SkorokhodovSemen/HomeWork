@@ -15,38 +15,40 @@ public class HomeWork4 {
 Выход их программы по слову exit (его в массив не добавлять) или если массив заполнен
 Перед завершением программы, вывести получившийся массив в консоль
          */
-
         Scanner in = new Scanner(System.in);
-        System.out.println("Сколько слов вы хотите добавить в массив?");
-        int n = Integer.parseInt(in.nextLine());
-        int a = 0;
-        String[] userWords = new String[n];
-        for (int i = 0; i < userWords.length; i++) {
-            System.out.println("Введите слово");
-            String userWord = in.nextLine();
-            if (userWord.equalsIgnoreCase("exit")) break;
-            for (int j = 0; j < i; j++) {
-                if (userWord.equalsIgnoreCase(userWords[j])) a += 1;
-            }
-            if (a == 0) userWords[i] = userWord;
-            a = 0;
-        }
-        System.out.println(Arrays.toString(userWords));
-        for (int i = 0; i < userWords.length; i++) {
-            if (!(userWords[i] == null)) a += 1;
-        }
-        int b = 0;
-        String[] userWordsWithoutNull = new String[a];
-        for (int i = 0; i < userWordsWithoutNull.length; i++) {
-            for (int j = b; j < userWords.length; j++) {
-                if (!(userWords[j] == null)) {
-                    userWordsWithoutNull[i] = userWords[j];
-                    b = i;
-                    break;
-                }
-            }
-        }
-        System.out.println(Arrays.toString(userWordsWithoutNull));
+//          ПЕРЕДЕЛАТЬ
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Сколько слов вы хотите добавить в массив?");
+//        int n = Integer.parseInt(in.nextLine());
+//        int a = 0;
+//        String[] userWords = new String[n];
+//        while (true) {
+//                System.out.println("Введите слово");
+//                String userWord = in.nextLine();
+//                if (userWord.equalsIgnoreCase("exit")) break;
+//                for (int j = 0; j < a; j++) {
+//                    if (userWord.equalsIgnoreCase(userWords[j])){
+//                        break;
+//                    } else userWords[j] = userWord;
+//                }
+//                a= userWords.length;
+//            }
+//        System.out.println(Arrays.toString(userWords));
+//        for (int i = 0; i < userWords.length; i++) {
+//            if (!(userWords[i] == null)) a += 1;
+//        }
+//        int b = 0;
+//        String[] userWordsWithoutNull = new String[a];
+//        for (int i = 0; i < userWordsWithoutNull.length; i++) {
+//            for (int j = b; j < userWords.length; j++) {
+//                if (!(userWords[j] == null)) {
+//                    userWordsWithoutNull[i] = userWords[j];
+//                    b = i;
+//                    break;
+//                }
+//            }
+//        }
+//        System.out.println(Arrays.toString(userWordsWithoutNull));
         // Не получается вывести на экран слова. Разобрать на паре.
 
 

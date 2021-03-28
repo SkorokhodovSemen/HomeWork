@@ -4,7 +4,7 @@ public class Exercise {
 
     public static void main(String[] args) {
 
-        Library library1 = new Library();
+
         Author author1 = new Author();
         Book book1 = new Book(1);
         author1.setAuthorName("Михаил");
@@ -13,10 +13,21 @@ public class Exercise {
         book1.setPage(758);
         book1.setYears(1956);
         book1.addAuthor(author1);
-        System.out.println(book1);
+        Library library1 = new Library();
         library1.setNumber(1);
         library1.addBooks(book1);
         System.out.println(library1);
+        Book book2 = new Book(1);
+        book2.addAuthor(author1);
+        book2.setYears(1949);
+        book2.setPage(332);
+        book2.setNameBook("Собачье сердце");
+        library1.addBooks(book2);
+        System.out.println(library1);
+
+
+
+
 
 
 
