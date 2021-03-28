@@ -23,14 +23,15 @@ public class Library {
     public void addBooks(Book book) {
         Objects.requireNonNull(book, "book не может быть null");
         for (int i = 0; i < 20; i++) {
-            if (book.getNameBook().equalsIgnoreCase(books[i].getNameBook())) {
-                if (books[i] == null) {
-                    books[i] = book;
-                    return; // в void методах используется для завершения работы метода
+            if (books[i] == null) {
+                books[i] = book;
+                return; // в void методах используется для завершения работы метода
+            } else {
+                if (book.getNameBook().equalsIgnoreCase(books[i].getNameBook())) {
+                    System.out.println("Такая книга уже есть, выберите другое хранилище");
+                    return;
                 }
             }
-            System.out.println("Такая книга уже есть, выберите другое хранилище");
-            return;
         }
         System.out.println("Хранилище заполнено, выберите другое");
     }

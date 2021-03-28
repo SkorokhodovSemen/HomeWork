@@ -25,6 +25,15 @@ public class Exercise {
         library1.addBooks(book2);
         System.out.println(library1);
 
+//        При добавлении книги с одинаковым названием выдает ошибку. Разобрать на паре
+//        Book book3 = new Book(1);
+//        book2.addAuthor(author1);
+//        book2.setYears(1955);
+//        book2.setPage(458);
+//        book2.setNameBook("Собачье сердце");
+//        library1.addBooks(book3);
+//        System.out.println(library1);
+
 
 
 
