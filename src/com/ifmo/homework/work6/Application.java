@@ -20,13 +20,13 @@ public class Application {
         Mouse mouse1 = new Mouse();
         mouse1.setSpeedMouse(4);
         Mouse mouse2 = new Mouse();
-        mouse1.setSpeedMouse(5);
+        mouse2.setSpeedMouse(5);
         Mouse mouse3 = new Mouse();
-        mouse1.setSpeedMouse(16);
+        mouse3.setSpeedMouse(16);
         Mouse mouse4 = new Mouse();
-        mouse1.setSpeedMouse(3);
+        mouse4.setSpeedMouse(3);
         Mouse mouse5 = new Mouse();
-        mouse1.setSpeedMouse(8);
+        mouse5.setSpeedMouse(8);
         cat1.addMouse(mouse1);
         cat1.addMouse(mouse2);
         cat1.addMouse(mouse4);

@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Cat {
 
-//    Кот: имя, цвет, скорость, вес, пойманные мыши;
+    //    Кот: имя, цвет, скорость, вес, пойманные мыши;
     private String nameCat;
     private String colorCat;
     private double speedCat;
@@ -39,7 +39,7 @@ public class Cat {
     }
 
     public void setSpeedCat(double speedCat) {
-        if (speedCat < 1 || speedCat>20) {
+        if (speedCat < 1 || speedCat > 20) {
             throw new IllegalArgumentException("Не бывает таких котов");
         }
         this.speedCat = speedCat;
@@ -50,24 +50,26 @@ public class Cat {
     }
 
     public void setWeightCat(double weightCat) {
-        if (weightCat < 1 || weightCat>20) {
+        if (weightCat < 1 || weightCat > 20) {
             throw new IllegalArgumentException("Не бывает таких котов");
         }
         this.weightCat = weightCat;
     }
 
 
-    public Cat () {eat = new Mouse[100];}
+    public Cat() {
+        eat = new Mouse[100];
+    }
 
-    public void addMouse(Mouse mouse){
-        if (mouse.getSpeedMouse()<getSpeedCat()) {
+    public void addMouse(Mouse mouse) {
+        if (mouse.getSpeedMouse() < getSpeedCat()) {
             for (int i = 0; i < 100; i++) {
                 if (eat[i] == null) {
                     eat[i] = mouse;
                     return;
                 }
             }
-        } else System.out.println("Не поймал");
+        } else System.out.println("Не поймал" + mouse);
     }
 
     public Mouse[] getEat() {
@@ -81,27 +83,31 @@ public class Cat {
         }
         if (cat1.getWeightCat() > cat2.getWeightCat()) {
             for (int i = 0; i < 100; i++) {
-                if (cat1.getSpeedCat() > cat2.getEat()[i].getSpeedMouse()) {
-                    for (int j = 0; j < 100; j++) {
-                        if (eat[j] == null) {
-                            eat[j] = eat[i];
-                            break;
+                if (cat2.getEat()[i] != null) {
+                    if (cat1.getSpeedCat() > cat2.getEat()[i].getSpeedMouse()) {
+                        for (int j = 0; j < 100; j++) {
+                            if (eat[j] == null) {
+                                eat[j] = eat[i];
+                                break;
+                            }
                         }
-                    }
-                } else System.out.println("Мышонок сбежал");
-                cat2.getEat()[i] = null;
+                    } else System.out.println("Мышонок сбежал");
+                    cat2.getEat()[i] = null;
+                }
             }
         } else {
             for (int i = 0; i < 100; i++) {
-                cat1.getEat()[i] = null;
-                if (cat2.getSpeedCat() > cat1.getEat()[i].getSpeedMouse()) {
-                    for (int j = 0; j < 100; j++) {
-                        if (eat[j] == null) {
-                            eat[j] = eat[i];
-                            break;
+                if (cat2.getEat()[i] != null) {
+                    if (cat2.getSpeedCat() > cat1.getEat()[i].getSpeedMouse()) {
+                        for (int j = 0; j < 100; j++) {
+                            if (eat[j] == null) {
+                                eat[j] = eat[i];
+                                break;
+                            }
                         }
-                    }
-                } else System.out.println("Мышонок сбежал");
+                    } else System.out.println("Мышонок сбежал");
+                    cat1.getEat()[i] = null;
+                }
             }
         }
     }
