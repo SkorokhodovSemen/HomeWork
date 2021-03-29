@@ -87,8 +87,8 @@ public class Cat {
                     if (cat1.getSpeedCat() > cat2.getEat()[i].getSpeedMouse()) {
                         for (int j = 0; j < 100; j++) {
                             if (eat[j] == null) {
-                                eat[j] = eat[i];
-                                break;
+                                eat[j] = cat2.getEat()[i];
+                                break;    //Что то тут
                             }
                         }
                     } else System.out.println("Мышонок сбежал");
@@ -101,7 +101,7 @@ public class Cat {
                     if (cat2.getSpeedCat() > cat1.getEat()[i].getSpeedMouse()) {
                         for (int j = 0; j < 100; j++) {
                             if (eat[j] == null) {
-                                eat[j] = eat[i];
+                                eat[j] = cat1.getEat()[i];
                                 break;
                             }
                         }
