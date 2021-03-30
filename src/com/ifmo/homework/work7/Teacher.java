@@ -7,8 +7,8 @@ public class Teacher extends Worker implements TeachAble{
     }
 
     @Override
-    public void Teach(Student student) {
-
+    public void Teach(Worker student, Worker teacher) {
+        teacher.plusLearnLvl(teacher,student);
     }
 
 }

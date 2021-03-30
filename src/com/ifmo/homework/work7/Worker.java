@@ -9,19 +9,22 @@ abstract public class Worker extends People {
         this.subjects = subjects;
         this.learnLvl = learnLvl;
     }
-    public void plusLearnLvl (int count) {
-        learnLvl +=count;
+
+
+    public boolean isLearnAble(Worker teacher, Worker student) {
+        return  teacher.getSubjects().equals(student.getSubjects());
     }
 
-    public boolean isLearnAble() {
-        return learnLvl > 20;
+    public void plusLearnLvl (Worker teacher, Worker student) {
+        if (!(isLearnAble(teacher, student))) return;
+        if (isLearnAble(teacher, student)) learnLvl = student.getLearnLvl() + teacher.getLearnLvl();
     }
-
-
 
     public int getLearnLvl() {
         return learnLvl;
     }
+
+
 
     public String getSubjects() {
         return subjects;

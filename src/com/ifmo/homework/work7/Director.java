@@ -7,6 +7,14 @@ public class Director extends People{
         super(name, age);
     }
 
+    public void startDay(){
+        System.out.println("Начало учебного дня");
+    }
+
+    public void endDay(){
+        System.out.println("Окончание учебного дня");
+    }
+
 
 
 }

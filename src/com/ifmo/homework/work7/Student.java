@@ -6,9 +6,11 @@ public class Student extends Worker implements LearnAble{
         super(name, age, subjects, learnLvl);
     }
 
-    @Override
-    public void Learn(Teacher teacher) {
 
+    @Override
+    public void Learn(Worker teacher, Worker student) {
+        student.plusLearnLvl(teacher,student);
     }
+
 
 }
