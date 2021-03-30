@@ -2,7 +2,9 @@ package com.ifmo.homework.work7;
 
 import com.ifmo.homework.work5.Book;
 
-public class School implements LearnAble{
+import java.util.Arrays;
+
+public class School implements TeachAble, LearnAble{
     private String title;
     private Director director;
     private Teacher[] teachers;
@@ -42,19 +44,21 @@ public class School implements LearnAble{
         director.startDay();
         for (int i = 0; i < teachers.length; i++) {
             for (int j = 0; j < students.length; j++) {
-                Learn(teachers[i],students[j]);
-//                students[j].plusLearnLvl(teachers[i], students[j]);
+                Teach(students[j]);{
+                    students[j].Learn();
+                    break;
+                }
             }
+            break;
         }
         director.endDay();
     }
 
     @Override
-    public void Learn(Worker teacher, Worker student) {
-        student.plusLearnLvl(teacher,student);
+    public void Teach(Worker student) {
     }
 
-
-
-
+    @Override
+    public void Learn() {
+    }
 }
