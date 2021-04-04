@@ -7,7 +7,7 @@ public class Application {
         Student student = new Student("Семен", 24, "Java", 40);
         Student student1 = new Student("Роман", 27, "Java", 25);
         Teacher teacher = new Teacher("Дарья", 31, "Java");
-        Teacher teacher1 = new Teacher("Дарья", 32, "Python");
+        Teacher teacher1 = new Teacher("Дарья", 32, "Java");
         Director director = new Director("Босс", 147);
         School school = new School("Итмо", director);
         school.addTeacher(teacher);
