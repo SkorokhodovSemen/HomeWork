@@ -27,6 +27,12 @@ public class MessageTask {
         System.out.println("HIGH=" + h);
         System.out.println("URGENT=" + u);
     }
+    public static void countEachPriority1 (List<Message> messageList) {
+        int[] counts = new int[Message.MessagePriority.values().length];
+        for (Message message : messageList) {
+            counts[message.getPriority().ordinal()]++;
+        }
+    }
 
     public static void countEachCode1(List<Message> messageList) {
         HashMap<Integer,Integer> countMap = new HashMap<>();
@@ -96,6 +102,10 @@ public class MessageTask {
         System.out.println("7=" + h);
         System.out.println("8=" + i);
         System.out.println("9=" + j);
+    }
+
+    public static void uniqueMessageCount1(List<Message> messageList) {
+        System.out.println(new HashSet<>(messageList).size());
     }
 
     public static void uniqueMessageCount(List<Message> messageList) {
@@ -168,7 +178,7 @@ public class MessageTask {
             }
         }
         System.out.println(copy);
-        return null;
+        return new ArrayList<>(new LinkedHashSet<>(messageList));
     }
 
     public static List<Message> copyEach(List<Message> messageList, Message.MessagePriority priority) {
