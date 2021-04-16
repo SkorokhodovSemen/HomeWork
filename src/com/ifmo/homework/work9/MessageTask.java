@@ -28,8 +28,29 @@ public class MessageTask {
         System.out.println("URGENT=" + u);
     }
 
+    public static void countEachCode1(List<Message> messageList) {
+        HashMap<Integer,Integer> countMap = new HashMap<>();
+//        for (Message message : messageList) {
+//            if (countMap.containsKey(message.getCode())){
+//                countMap.put(message.getCode(), countMap.get(message.getCode())+1);
+//            } else {
+//                countMap.put(message.getCode(),1);
+//            }
+//        }
+        System.out.println(countMap);
+        for (Message message : messageList) {
+            countMap.put(message.getCode(),countMap.getOrDefault(message.getCode(),0)+1);
+        }
+        System.out.println(countMap);
+        }
 
-    public static void countEachCode(List<Message> messageList) {
+
+        // TODO: Подсчитать количество сообщений для каждого кода сообщения
+        //  Ответ в консоль
+
+
+
+        public static void countEachCode(List<Message> messageList) {
         // TODO: Подсчитать количество сообщений для каждого кода сообщения
         //  Ответ в консоль
         int a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0;
@@ -185,8 +206,11 @@ public class MessageTask {
         uniqueMessagesInOriginalOrder(messages);
         copyEach(messages, Message.MessagePriority.HIGH);
         copyOther(messages, Message.MessagePriority.HIGH);
+        countEachCode1(messages);
 
 
     }
+
+
 
 }
