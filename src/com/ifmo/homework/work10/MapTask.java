@@ -73,6 +73,10 @@ public class MapTask {
                 "packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will " +
                 "uncover many web sites still uncover in their infancy Various versions uncover have evolved over the years uncover sometimes by accident" +
                 " sometimes on purpose injected humour and the like";
+        Customer.word(text,"is");
+        Customer.group(text);
+        Customer.top(text);
+        Customer.abc(text);
 
     }
 }
