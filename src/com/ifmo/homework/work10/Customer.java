@@ -60,11 +60,20 @@ public class Customer {
     public static void top(String text) {
         int b =0;
         String[] text1 = text.split(" ");
-        HashMap<String, Integer> count = new HashMap<>();
+        TreeMap<String, Integer> count = new TreeMap<>();
         for (int i = 0; i < text1.length; i++) {
             count.put(text1[i].toLowerCase(Locale.ROOT), b);
         }
-        System.out.println(count);
+        for (Map.Entry<String, Integer> stringIntegerEntry : count.entrySet()) {
+            for (int i = 0; i < text1.length; i++) {
+                if (text1[i].equalsIgnoreCase(stringIntegerEntry.getKey())){
+                    b=stringIntegerEntry.getValue();
+                    b+=1;
+                    count.put(stringIntegerEntry.getKey(),b);
+                }
+            }
+        }
+        System.out.println(count);  //Посчитано повторение слов, как отсортировать по значениям мапу и вывести первые 10
     }
 
     public static void abc(String text) {
