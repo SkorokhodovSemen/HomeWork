@@ -60,10 +60,10 @@ public class PupilTask {
         // имена и дату рождения оставшихся вывести в консоль.
         // Например, [Иван, Александра, Ольга, Иван, Ольга] -> [Иван, Александра, Ольга]
 
-//        Map<String,ArrayList<Pupil>> nameMap = pupils1.stream()
-//                .collect(Collectors.toMap(n -> n.,               //не понимаю, как сделать имя ключом
-//                        Collectors.toCollection(ArrayList::new),
-//                        (item1, item2) -> item1));
+        Map<String,ArrayList<Pupil>> nameMap = pupils1.stream()
+                .collect(Collectors.groupingBy(Pupil::getName,              //не понимаю, как сделать имя ключом
+                        Collectors.toCollection(ArrayList::new)));
+        System.out.println(nameMap);
 
 
 

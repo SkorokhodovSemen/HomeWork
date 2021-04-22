@@ -12,6 +12,31 @@ public class Transaction {
         this.account = account;
     }
 
+    public long getSum() {
+        return sum;
+    }
+
+    public void setSum(long sum) {
+        this.sum = sum;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "uuid='" + uuid + '\'' +
+                ", sum=" + sum +
+                ", account=" + account +
+                '}';
+    }
+
     // TODO: добавить геттеры и сеттеры
 
 }

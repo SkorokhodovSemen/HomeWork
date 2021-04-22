@@ -1,5 +1,7 @@
 package com.ifmo.homework.work11.transaction;
 
+import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class TransactionsTask {
@@ -24,7 +26,16 @@ public class TransactionsTask {
 
         // TODO:: 1. собрать Map<String, Long>,
         //  где String - номер (number) аккаунта, Long - сумма транзакций (sum) по аккаунту
+
+        Map<String,Long> stringLongMap = transactionStream.collect(Collectors.groupingBy(transaction -> transaction.getAccount().toString(),
+                Collectors.summingLong(transaction -> transaction.getSum())));
+        System.out.println(stringLongMap);
+
         // TODO: 2. найти сумму транзакций по каждому аккаунту
+
+
+
+
     }
 
 }
