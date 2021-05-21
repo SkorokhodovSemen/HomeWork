@@ -20,7 +20,7 @@ public class TopTenWords {
 //        System.out.println(Runtime.getRuntime().availableProcessors());
 
         ArrayList<ThreadCount> threadCounts = new ArrayList<>();
-        HashMap<String,Integer> map = new HashMap<String, Integer>() {};
+        HashMap<String,Integer> map1 = new HashMap<String, Integer>() {};
 
         for (int i = 0; i < Runtime.getRuntime().availableProcessors(); i++) {
             threadCounts.add(new ThreadCount());
